@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pkexec /usr/lib/linuxmint/common/mint-remove-desktop-file.py $1
+

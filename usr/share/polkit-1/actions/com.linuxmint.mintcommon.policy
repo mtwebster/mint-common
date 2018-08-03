@@ -7,26 +7,13 @@
   <vendor>Linux Mint</vendor>
   <vendor_url>https://linuxmint.com/</vendor_url>
 
-  <action id="com.linuxmint.mintcommon.remove-application">
+  <action id="com.linuxmint.mintcommon.mint-remove-desktop-file">
     <icon_name>system-software-package-manager</icon_name>
     <defaults>
-      <allow_any>no</allow_any>
-      <allow_inactive>no</allow_inactive>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
       <allow_active>auth_self_keep</allow_active>
     </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/linuxmint/common/mint-remove-application.py</annotate>
-    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/mint-remove-desktop-file</annotate>
   </action>
-
-    <action id="org.cinnamon.remove-application">
-    <icon_name>system-software-package-manager</icon_name>
-    <defaults>
-      <allow_any>no</allow_any>
-      <allow_inactive>no</allow_inactive>
-      <allow_active>auth_self_keep</allow_active>
-    </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/cinnamon-remove-application</annotate>
-    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
-  </action>
-
 </policyconfig>

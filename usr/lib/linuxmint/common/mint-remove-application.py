@@ -28,8 +28,7 @@ class MintRemoveWindow:
                 response = warnDlg.run()
                 if response == Gtk.ResponseType.YES:
                     print ("removing '%s'" % self.desktopFile)
-                    os.system("rm -f '%s'" % self.desktopFile)
-                    os.system("rm -f '%s.desktop'" % self.desktopFile)
+                    subprocess.run(["mint-remove-desktop-file", self.desktopFile])
                 warnDlg.destroy()
 
             sys.exit(0)
